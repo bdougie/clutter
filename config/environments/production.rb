@@ -88,4 +88,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.force_ssl = true
+
+  config.action_mailer.default_url_options = { host: 'clutter-down.herokuapp.com' }
 end
