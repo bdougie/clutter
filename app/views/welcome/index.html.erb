@@ -1,24 +1,181 @@
-<br>
-<div class="jumbotron text-center">
-    <h1>CLUTTER</h1>
-    <p>Dedicated to helping clients develop sustainable lifestyles</p>
-    <p><%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %></p>
-</div><br>
+<header id="home">
+  <div class="header-content">
+    <div class="header-content-inner">
+      <h1>CLUTTER</h1>
+      <hr>
+      <p>Declutter your Space and Mind<br>One Room at a Time</p>
+      <% if !user_signed_in? %>
+        <%= link_to 'SIGN UP', new_user_registration_path, :class => "btn btn-lg btn-primary", :style => "font-size: 16px" %>
+      <% end %>
+    </div>
+  </div>
+</header>
 
-<div class="row text-center">
-    <div class="col-md-4">
-        <span style="font-size: 50px" class="glyphicon glyphicon-bed"></span>
-        <h2>Reclaim</h2>
-        <p>First, we reclaim the functionality of your bedroom, closets, kitchen, living room and office.</p>
+<section id="about" class="bg-primary">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <h2 class="section-heading">HOW IT WORKS</h2>
+        <hr class="light">
+        <p class="text-faded" style="font-size: 18px">Based on years of proven organizational tactics and strategies, our team will guide you through a step by step process that will change the way you live your life. Throughout the process, you will be provided with expertise in space efficiency, habit forming, and sustainable systems. These personalized solutions will empower you to think beyond your physical possessions and focus on a clutter-free lifestyle.</p>
+      </div>
     </div>
-    <div class="col-md-4">
-        <span style="font-size: 50px" class="glyphicon glyphicon-scissors"></span>
-        <h2>Redesign</h2>
-        <p>Next, we strive to redesign and repurpose your existing pieces to improve the organizational flow of your everyday routines.</p>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="section-heading">SERVICES</h2>
+        <hr class="primary">
+      </div>
     </div>
-    <div class="col-md-4">
-        <span style="font-size: 50px" class="glyphicon glyphicon-picture"></span>
-        <h2>Reinvent</h2>
-        <p>Finally, we take action to reinvent your entire living and work space from top to bottom.</p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <div class="service-box">
+          <i class="fa fa-4x fa-phone text-primary sr-icons"></i>
+          <h3>Consultation</h3>
+          <p class="text-muted">First, we will schedule a phone consultation to learn more about you and your goals.</p>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="service-box">
+          <i class="fa fa-4x fa-home text-primary sr-icons"></i>
+          <h3>Assessment</h3>
+          <p class="text-muted">Next, we will conduct an at-home visit to assess your environment and create a tailored plan.</p>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="service-box">
+          <i class="fa fa-4x fa-handshake-o text-primary sr-icons"></i>
+          <h3>Transformation</h3>
+          <p class="text-muted">Finally, we will transform your space and assist you in maintaining a brand new lifestyle.</p>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+</section>
+
+<section id="projects" class="bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="section-heading">PROJECTS</h2>
+        <hr class="light">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 projects">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item active">
+              <%= image_tag "1.jpg" %>
+            </div>
+            <div class="item">
+              <%= image_tag "2.jpg" %>
+            </div>
+            <div class="item">
+              <%= image_tag "3.jpg" %>
+            </div>
+          </div>
+
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6 projects">
+        <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel2" data-slide-to="1"></li>
+            <li data-target="#myCarousel2" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item active">
+              <%= image_tag "3.jpg" %>
+            </div>
+            <div class="item">
+              <%= image_tag "1.jpg" %>
+            </div>
+            <div class="item">
+              <%= image_tag "2.jpg" %>
+            </div>
+          </div>
+
+          <a class="left carousel-control" href="#myCarousel2" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel2" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="bg-primary">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="section-heading">TEAM</h2>
+        <hr class="light">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-md-offset-2 text-center">
+        <h2>Lauren Cattano</h2>
+        <%= image_tag "about.png", height: 150, width: 150, :class => "img-circle", :style => "margin: 20px 0" %>
+        <h4>COO</h4>
+        <h4>Chief Organization Officer</h4>
+      </div>
+      <div class="col-md-3 col-md-offset-2 text-center">
+        <h2>Sahil Mehta</h2>
+        <%= image_tag "about.png", height: 150, width: 150, :class => "img-circle", :style => "margin: 20px 0" %>
+        <h4>CTO</h4>
+        <h4>Chief Tidying Officer</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <p class="quote">"I am so happy with everything we were able to accomplish in a single day. My brain is far less foggy now that my place is clean and clutter-free."</p>
+        <h4>Raj Pandey</h4>
+      </div>
+      <div class="col-md-6 text-center">
+        <p class="quote">"Breaking through the paralysis of not knowing how to stay organized was life altering. I have so much more energy nowadays to focus on the things that truly matter."</p>
+        <h4>Shannon Hope</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p><i class="fa fa-copyright"></i> Clutter 2018</p>
+      </div>
+    </div>
+  </div>
+</footer>

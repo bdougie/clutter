@@ -15,3 +15,34 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+
+$(document).ready(function() {
+
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 100) {
+      $('.navbar-default').addClass('scroll');
+    } else {
+      $('.navbar-default').removeClass('scroll');
+    }
+  });
+
+  function scrollToDiv(element, navheight) {
+    var offset = element.offset();
+    var offsetTop = offset.top;
+    var totalScroll = offsetTop - navheight;
+
+    $('body, html').animate({
+      scrollTop: totalScroll
+    }, 500);
+  }
+
+  $('nav ul li a').click(function() {
+    var element = $(this).attr('href');
+    var elementWrapped = $(element);
+    
+    scrollToDiv(elementWrapped, 40);
+    
+    return false;
+  });
+
+});

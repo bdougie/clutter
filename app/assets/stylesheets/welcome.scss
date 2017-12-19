@@ -1,0 +1,131 @@
+header {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-image: url('header.jpg');
+  text-align: center;
+  color: white;
+}
+
+header .header-content {
+  position: relative;
+  text-align: center;
+  padding: 100px 15px 100px;
+  width: 100%;
+}
+
+header .header-content .header-content-inner h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 50px;
+  letter-spacing: 5px;
+}
+
+header .header-content .header-content-inner hr {
+  margin: 40px auto;
+}
+
+header .header-content .header-content-inner p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 22px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  header {
+    min-height: 100%;
+  }
+  header .header-content {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 0 50px;
+  }
+  header .header-content .header-content-inner {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header .header-content .header-content-inner h1 {
+    font-size: 80px;
+    letter-spacing: 10px;
+  }
+  header .header-content .header-content-inner p {
+    font-weight: 500;
+    font-size: 30px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.section-heading {
+  font-size: 40px;
+  margin-top: 0;
+}
+
+.service-box {
+  max-width: 400px;
+  margin: 50px auto 0;
+}
+
+.service-box h3 {
+  font-size: 30px;
+}
+
+.service-box p {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+@media (min-width: 992px) {
+  .service-box {
+    margin: 20px auto 0;
+  }
+  .service-box p {
+    font-size: 20px;
+  }
+}
+
+#myCarousel,
+#myCarousel2 {
+  width: 400px; 
+  margin: 0 auto;
+}
+
+.projects {
+  padding: 30px;
+}
+
+.quote {
+  font-size: 18px;
+  font-style: italic;
+  padding: 10px;
+}
+
+footer {
+  padding: 30px;
+  display: table;
+}
+
+footer p { 
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  footer p {
+    text-align: left;
+  }
+}
