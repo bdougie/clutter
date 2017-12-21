@@ -91,5 +91,5 @@ Rails.application.configure do
 
   config.force_ssl = true
 
-  config.action_mailer.default_url_options = { host: 'clutter-down.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'clutter-free.herokuapp.com' }
 end
