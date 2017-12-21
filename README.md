@@ -1,1 +1,3 @@
-[Clutter](https://clutter-down.herokuapp.com): An organizational business dedicated to helping clients develop sustainable lifestyles that fit their daily routines
+# [Clutter](https://clutter-free.herokuapp.com): Declutter your space and mind, one room at a time
+
+Based on years of proven organizational tactics and strategies, our team will guide you through a step by step process that will change the way you live your life. Throughout the process, you will be provided with expertise in space efficiency, habit forming, and sustainable systems. These personalized solutions will empower you to think beyond your physical possessions and focus on a clutter-free lifestyle.
