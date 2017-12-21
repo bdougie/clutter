@@ -19,7 +19,7 @@
 $(document).ready(function() {
 
   $(window).scroll(function() {
-    if ($(document).scrollTop() > 100) {
+    if ($(document).scrollTop() > 50) {
       $('.navbar-default').addClass('scroll');
     } else {
       $('.navbar-default').removeClass('scroll');
