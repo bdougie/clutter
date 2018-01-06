@@ -21,30 +21,28 @@
       </div>
     <% end %>
   </div>
-
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="wrap">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= link_to 'Clutter', root_path, class: "navbar-brand" %>
+          <a href="<%= root_path %>#page-top" class="navbar-brand js-scroll-trigger">Clutter</a>
         </div>
-        <div class="collapse navbar-collapse" id="navbar">
+        <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
             <% if current_page?(root_path) && !user_signed_in? %>
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#team">Team</a></li>
+              <li><a href="#about" class="js-scroll-trigger">About</a></li>
+              <li><a href="#services" class="js-scroll-trigger">Services</a></li>
+              <li><a href="#projects" class="js-scroll-trigger">Projects</a></li>
+              <li><a href="#team" class="js-scroll-trigger">Team</a></li>
               <li><%= link_to "Login", new_user_session_path %><li>
               <li><%= link_to "Sign Up", new_user_registration_path %><li>
             <% end %>
             <% if user_signed_in? %>
-              <li><%= link_to "Home", root_path %></li>
               <li><%= link_to "Process", root_path %></li>
               <li><%= link_to "Profile", edit_user_registration_path %></li>
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>

@@ -13,6 +13,9 @@ header .header-content .header-content-inner h1 {
   margin-bottom: 0;
   font-size: 50px;
   letter-spacing: 5px;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
 }
 
 header .header-content .header-content-inner hr {

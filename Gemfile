@@ -20,6 +20,9 @@ gem "font-awesome-rails"
 gem 'devise'
 gem 'figaro'
 gem 'faker'
+gem 'animate-rails'
+gem 'jquery-easing-rails'
+
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.6'

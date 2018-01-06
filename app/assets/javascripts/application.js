@@ -12,11 +12,15 @@
 //
 //= require jquery
 //= require rails-ujs
-//= require turbolinks
 //= require bootstrap
+//= require jquery.easing
+//= require turbolinks
 //= require_tree .
 
-$(document).ready(function() {
+
+$(document).on('turbolinks:load', function() {
+
+  $('.header-content-inner h1').addClass('animated pulse');
 
   $(window).scroll(function() {
     if ($(document).scrollTop() > 50) {
@@ -26,23 +30,17 @@ $(document).ready(function() {
     }
   });
 
-  function scrollToDiv(element, navheight) {
-    var offset = element.offset();
-    var offsetTop = offset.top;
-    var totalScroll = offsetTop - navheight;
-
-    $('body, html').animate({
-      scrollTop: totalScroll
-    }, 500);
-  }
-
-  $('nav ul li a').click(function() {
-    var element = $(this).attr('href');
-    var elementWrapped = $(element);
-    
-    scrollToDiv(elementWrapped, 40);
-    
-    return false;
+  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: (target.offset().top - 54)
+        }, 1500, "easeInOutExpo");
+        return false;
+      }
+    }
   });
 
 });
