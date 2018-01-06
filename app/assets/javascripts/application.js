@@ -18,10 +18,23 @@
 //= require_tree .
 
 
+var animateServices = function() {
+  var revealService = function() {
+    $(this).css({
+      opacity: 1,
+      transform: 'scaleX(1) translateY(0)'
+    });
+  };
+  
+  $.each($('.service-box'), revealService);
+};
+
 $(document).on('turbolinks:load', function() {
 
+  // Clutter header animation
   $('.header-content-inner h1').addClass('animated pulse');
 
+  // Navbar color change on scroll
   $(window).scroll(function() {
     if ($(document).scrollTop() > 50) {
       $('.navbar-default').addClass('scroll');
@@ -30,6 +43,7 @@ $(document).on('turbolinks:load', function() {
     }
   });
 
+  // Nav link ease scroll to section
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -40,6 +54,15 @@ $(document).on('turbolinks:load', function() {
         }, 1500, "easeInOutExpo");
         return false;
       }
+    }
+  });
+
+  // Service box ease-in transition on scroll
+  var scrollDistance = $('#services').offset().top - $(window).height() + 200;
+  
+  $(window).scroll(function(event) {
+    if ($(window).scrollTop() >= scrollDistance) {
+      animateServices();
     }
   });
 
