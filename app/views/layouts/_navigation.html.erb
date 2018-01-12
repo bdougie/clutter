@@ -14,8 +14,8 @@
           <% if current_page?(root_path) && !user_signed_in? %>
             <li><a href="#about" class="js-scroll-trigger">About</a></li>
             <li><a href="#services" class="js-scroll-trigger">Services</a></li>
-            <li><a href="#projects" class="js-scroll-trigger">Projects</a></li>
             <li><a href="#team" class="js-scroll-trigger">Team</a></li>
+            <li><a href="#projects" class="js-scroll-trigger">Projects</a></li>
             <li><%= link_to "Login", new_user_session_path %><li>
             <li><%= link_to "Sign Up", new_user_registration_path %><li>
           <% end %>
