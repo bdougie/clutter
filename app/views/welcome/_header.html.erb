@@ -1,0 +1,12 @@
+<header>
+  <div class="header-content">
+    <div class="header-content-inner">
+      <h1>CLUTTER</h1>
+      <hr>
+      <p>Declutter Your Space and Mind<br><span class="typed"></span></p>
+      <% if !user_signed_in? %>
+        <%= link_to 'GET STARTED', new_user_registration_path, :class => "btn btn-lg btn-primary", :style => "font-size: 16px" %>
+      <% end %>
+    </div>
+  </div>
+</header>

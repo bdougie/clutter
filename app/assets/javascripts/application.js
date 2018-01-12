@@ -10,10 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
 //= require rails-ujs
-//= require bootstrap
+//= require jquery
 //= require jquery.easing
+//= require bootstrap-sprockets
+//= require typed.js/lib/typed
 //= require turbolinks
 //= require_tree .
 
@@ -65,5 +66,15 @@ $(document).on('turbolinks:load', function() {
       animateServices();
     }
   });
+
+  var header = {
+    strings: ["^300 One Bedroom at a Time", "^300 One Bathroom at a Time", "^300 One Living Room at a Time", "^300 One Kitchen at a Time", "^300 One Closet at a Time"],
+    typeSpeed: 50,
+    backSpeed: 10,
+    smartBackspace: true,
+    loop: true
+  }
+
+  var typed = new Typed(".header-content-inner .typed", header);
 
 });

@@ -1,3 +1,11 @@
+.typed-cursor {
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  -ms-animation: blink 0.7s infinite;
+  -o-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
 header .header-content {
   position: relative;
   text-align: center;
@@ -102,8 +110,18 @@ header .header-content .header-content-inner p {
 }
 
 .team {
+  background-color: #222222;
+  border: 2px solid white;
+  margin: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+  .team {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }
 
 .testimonial {
@@ -112,8 +130,8 @@ header .header-content .header-content-inner p {
 } 
 
 .testimonial p {
+  font-style: oblique;
   font-size: 18px;
-  font-style: italic;
   padding: 5px 10px;
 }
 
