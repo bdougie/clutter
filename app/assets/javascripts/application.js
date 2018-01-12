@@ -13,7 +13,7 @@
 //= require rails-ujs
 //= require jquery
 //= require jquery.easing
-//= require bootstrap-sprockets
+//= require bootstrap
 //= require typed.js/lib/typed
 //= require turbolinks
 //= require_tree .
