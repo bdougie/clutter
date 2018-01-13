@@ -68,8 +68,8 @@ $(document).on('turbolinks:load', function() {
   });
 
   var header = {
-    strings: ["^300 One Bedroom at a Time", "^300 One Bathroom at a Time", "^300 One Living Room at a Time", "^300 One Kitchen at a Time", "^300 One Closet at a Time"],
-    typeSpeed: 50,
+    strings: ["^300 One Bedroom at a Time^100", "^300 One Bathroom at a Time^100", "^300 One Living Room at a Time^100", "^300 One Kitchen at a Time^100", "^300 One Closet at a Time^100"],
+    typeSpeed: 40,
     backSpeed: 10,
     smartBackspace: true,
     loop: true

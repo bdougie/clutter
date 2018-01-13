@@ -1,49 +1,63 @@
 <header>
   <div class="header-content">
     <div class="header-content-inner">
-      <h2 class="text-center">EDIT USER INFO</h2>
+      <h2 class="text-center">EDIT USER INFORMATION</h2><br>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= devise_error_messages! %>
         <div class="row">
           <div class="col-md-4 col-md-offset-2" style="text-align: left">
             <div class="form-group">
               <%= f.label :name %>
-              <%= f.text_field :name, class: 'form-control', placeholder: "Enter name" %>
+              <%= f.text_field :name, class: 'form-control', placeholder: "Name" %>
             </div>
             <div class="form-group">
               <%= f.label :email %>
-              <%= f.email_field :email, class: 'form-control', placeholder: "Enter email" %>
-            </div>
-            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-              <div class='form-group'>
-                <p>Waiting confirmation for:</p>
-                <%= resource.unconfirmed_email %>
-              </div>
-            <% end %>
-            <div class="form-group">
-              <%= f.label :new_password %>
-              <%= f.password_field :password, class: 'form-control', placeholder: "Enter new password" %>
+              <%= f.email_field :email, class: 'form-control', placeholder: "Email" %>
             </div>
             <div class="form-group">
-              <%= f.label :password_confirmation %>
-              <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "Enter password confirmation" %>
+              <%= f.label :phone_number, style: 'text-transform: capitalize' %>
+              <%= f.telephone_field :phone_number, :maxlength => 10, class: 'form-control', placeholder: "Phone Number" %>
             </div>
             <div class="form-group">
-              <%= f.label :current_password %>
-              <%= f.password_field :current_password, class: 'form-control', placeholder: "Enter current password" %>
+              <%= f.label :new_password, style: 'text-transform: capitalize' %>
+              <%= f.password_field :password, class: 'form-control', placeholder: "New Password" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :password_confirmation, style: 'text-transform: capitalize' %>
+              <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "Password Confirmation" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :current_password, style: 'text-transform: capitalize' %>
+              <%= f.password_field :current_password, class: 'form-control', placeholder: "Current Password" %>
             </div>
           </div>
           <div class="col-md-4" style="text-align: left">
             <div class="form-group">
-              <%= f.label :phone_number %>
-              <%= f.telephone_field :phone_number, :maxlength => 10, class: 'form-control', placeholder: "Enter phone number" %>
+              <%= f.label :street_address, style: 'text-transform: capitalize' %>
+              <%= f.text_field :street_address, class: 'form-control', placeholder: "Street Address" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :city %>
+              <%= f.text_field :city, class: 'form-control', placeholder: "City" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :state %>
+              <%= f.text_field :state, :maxlength => 2, class: 'form-control', placeholder: "State" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :zip_code, style: 'text-transform: capitalize' %>
+              <%= f.text_field :zip, :maxlength => 5, class: 'form-control', placeholder: "Zip Code" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :appointment %>
+              <%= f.datetime_field :appointment, class: 'form-control', placeholder: "Appointment" %>
             </div>
           </div>
-        </div>
+        </div><br>
         <div class="row">
           <div class="col-md-12 text-center">
             <div class="form-group">
-              <%= f.submit "Update Profile", class: 'btn btn-success' %>
+              <%= f.submit "Update Profile", class: 'btn btn-primary' %>
             </div>
           </div>
         </div>
