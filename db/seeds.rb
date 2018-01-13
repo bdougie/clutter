@@ -8,7 +8,7 @@ admin = User.new(
   city: 'Oakland',
   state: 'CA',
   zip: '94612',
-  appointment: '2018-04-20 04:20:00',
+  appointment: '2018-04-20 16:20:00',
   password: 'password'
 )
 admin.skip_confirmation!
