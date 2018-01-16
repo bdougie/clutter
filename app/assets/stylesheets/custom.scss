@@ -29,36 +29,6 @@ header .header-content .header-content-inner p {
   text-transform: uppercase;
 }
 
-@media (min-width: 768px) {
-  header {
-    min-height: 100%;
-  }
-  header .header-content {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    padding: 0 50px;
-  }
-  header .header-content .header-content-inner {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  header .header-content .header-content-inner h1 {
-    font-size: 80px;
-    letter-spacing: 10px;
-  }
-  header .header-content .header-content-inner p {
-    font-weight: 500;
-    font-size: 36px;
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 #about h2 {
   font-size: 40px;
   margin-top: 0;
@@ -88,13 +58,8 @@ header .header-content .header-content-inner p {
   margin-bottom: 0;
 }
 
-@media (min-width: 992px) {
-  .service-box {
-    margin: 20px auto 0;
-  }
-  .service-box p {
-    font-size: 20px;
-  }
+.service-agreement {
+  margin-top: 50px;
 }
 
 .carousel {
@@ -105,17 +70,6 @@ header .header-content .header-content-inner p {
   margin: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-.team p {
-  text-align: justify;
-}
-
-@media (min-width: 992px) {
-  .team {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
 }
 
 .testimonial {
@@ -141,7 +95,47 @@ footer p {
 }
 
 @media (min-width: 768px) {
+  header {
+    min-height: 100%;
+  }
+  header .header-content {
+    top: 50%;
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 0 50px;
+  }
+  header .header-content .header-content-inner {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header .header-content .header-content-inner h1 {
+    font-size: 80px;
+    letter-spacing: 10px;
+  }
+  header .header-content .header-content-inner p {
+    font-weight: 500;
+    font-size: 36px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   footer p {
     text-align: left;
+  }
+}
+
+@media (min-width: 992px) {
+  .service-box {
+    margin: 20px auto 0;
+  }
+  .service-box p {
+    font-size: 20px;
+  }
+  .team {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }

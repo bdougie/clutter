@@ -141,6 +141,43 @@ section {
   color: #F05F40;
 }
 
+a.btn.btn-primary.sign-up {
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.form {
+  margin-top: 100px;
+}
+
+.btn-primary,
+.btn-primary:visited {
+  border-radius: 0;
+  border: 2px solid white !important;
+  background-color: #F05F40 !important;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  border: 2px solid white !important;
+  background-color: #eb3812 !important;
+}
+
+.shared-links,
+.shared-links:visited {
+  color: white !important;
+  text-decoration : none !important;
+}
+
+.shared-links:hover,
+.shared-links:active,
+.shared-links:focus {
+  color: #F05F40 !important;
+  text-decoration : none !important;
+}
+
 @media (min-width: 768px) {
   .navbar-default {
     background-color: transparent;
@@ -182,31 +219,10 @@ section {
   .active {
     color: #F05F40;
   }
-}
-
-.btn-primary,
-.btn-primary:visited {
-  border-radius: 0;
-  border: 2px solid white !important;
-  background-color: #F05F40 !important;
-}
-
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:focus {
-  border: 2px solid white !important;
-  background-color: #eb3812 !important;
-}
-
-.shared-links,
-.shared-links:visited {
-  color: white !important;
-  text-decoration : none !important;
-}
-
-.shared-links:hover,
-.shared-links:active,
-.shared-links:focus {
-  color: #F05F40 !important;
-  text-decoration : none !important;
+  a.btn.btn-primary.sign-up.scroll {
+    border: 2px solid black !important;
+  }
+  a.btn.btn-primary.sign-up.scroll:hover {
+    color: black;
+  }
 }

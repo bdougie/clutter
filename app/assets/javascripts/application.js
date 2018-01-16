@@ -39,8 +39,10 @@ $(document).on('turbolinks:load', function() {
   $(window).scroll(function() {
     if ($(document).scrollTop() > 50) {
       $('.navbar-default').addClass('scroll');
+      $('a.btn.btn-primary.sign-up').addClass('scroll');
     } else {
       $('.navbar-default').removeClass('scroll');
+      $('a.btn.btn-primary.sign-up').removeClass('scroll');
     }
   });
 
@@ -67,6 +69,7 @@ $(document).on('turbolinks:load', function() {
     }
   });
 
+  // Typed Animation
   var header = {
     strings: ["^300 One Bedroom at a Time^100", "^300 One Bathroom at a Time^100", "^300 One Living Room at a Time^100", "^300 One Kitchen at a Time^100", "^300 One Closet at a Time^100"],
     typeSpeed: 40,

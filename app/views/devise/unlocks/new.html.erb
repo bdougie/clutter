@@ -1,20 +1,16 @@
-<header>
-  <div class="header-content">
-    <div class="header-content-inner">
-      <div class="col-md-4 col-md-offset-4" style="text-align: left">
-        <h2 class="text-center">RESEND UNLOCK INSTRUCTIONS</h2>
-        <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
-          <%= devise_error_messages! %>
-
+<div class="container form">
+  <div class="row">
+    <h2 class="text-center">RESEND UNLOCK INSTRUCTIONS</h2>
+    <div class="col-md-4 col-md-offset-4">
+      <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+        <%= render 'shared/errors', obj: resource %>
         <div class="form-group">
           <%= f.label :email %>
           <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: "Enter email" %>
         </div>
-        
         <div class="form-group">
           <%= f.submit "Resend Instructions", class: 'btn btn-primary' %>
         </div>
-        
         <div class="form-group">
           <%= render "devise/shared/links" %>
         </div>

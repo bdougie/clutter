@@ -17,19 +17,18 @@
             <li><a href="#team" class="js-scroll-trigger">Team</a></li>
             <li><a href="#projects" class="js-scroll-trigger">Projects</a></li>
             <li><%= link_to "Login", new_user_session_path %><li>
-            <li><%= link_to "Sign Up", new_user_registration_path %><li>
+            <li><%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary sign-up' %><li>
           <% end %>
           <% if user_signed_in? %>
             <li><%= link_to "Approach", '#' %></li>
             <li><%= link_to "Preparation", '#' %></li>
-            <li><%= link_to "Services", '#' %></li>
+            <li><%= link_to "Service", service_agreement_path %></li>
             <li><%= link_to "Profile", edit_user_registration_path %></li>
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
           <% end %>
-          <% if current_page?(new_user_registration_path) %>
+          <% if !current_page?(root_path) && !user_signed_in? %>
             <li><%= link_to "Login", new_user_session_path %><li>
-          <% elsif current_page?(new_user_session_path) %>
-            <li><%= link_to "Sign Up", new_user_registration_path %><li>
+            <li><%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary sign-up' %><li>
           <% end %>
          </ul>
       </div>
