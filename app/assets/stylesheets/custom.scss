@@ -34,7 +34,7 @@ h2.section-heading {
   margin-top: 0;
 }
 
-.service-box {
+.method-box {
   opacity: 0;
   max-width: 400px;
   margin: 50px auto 0;
@@ -49,17 +49,37 @@ h2.section-heading {
   transition-delay: 0.2s;
 }
 
-.service-box h3 {
+.method-box h3 {
   font-size: 30px;
 }
 
-.service-box p {
+.method-box p {
   font-size: 18px;
   margin-bottom: 0;
 }
 
-.service-agreement {
-  margin-top: 50px;
+.process-box {
+  opacity: 0;
+  max-width: 400px;
+  margin: 50px auto 0;
+  -webkit-transform: scaleX(0.9) translateY(3rem);
+  -moz-transform: scaleX(0.9) translateY(3rem);
+  transform: scaleX(0.9) translateY(3rem);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.process-box h3 {
+  font-size: 30px;
+}
+
+.process-box p {
+  font-size: 18px;
+  margin-bottom: 0;
 }
 
 .carousel {
@@ -89,7 +109,6 @@ footer {
 }
 
 footer p { 
-  text-align: center;
   display: table-cell;
   vertical-align: middle;
 }
@@ -122,16 +141,19 @@ footer p {
     margin-left: auto;
     margin-right: auto;
   }
-  footer p {
-    text-align: left;
-  }
 }
 
 @media (min-width: 992px) {
-  .service-box {
+  .method-box {
     margin: 20px auto 0;
   }
-  .service-box p {
+  .method-box p {
+    font-size: 20px;
+  }
+  .process-box {
+    margin: 20px auto 0;
+  }
+  .process-box p {
     font-size: 20px;
   }
   .team {

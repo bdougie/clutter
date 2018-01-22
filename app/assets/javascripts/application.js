@@ -18,6 +18,16 @@
 //= require turbolinks
 //= require_tree .
 
+var animateMethods = function() {
+  var revealMethod = function() {
+    $(this).css({
+      opacity: 1,
+      transform: 'scaleX(1) translateY(0)'
+    });
+  };
+  
+  $.each($('.method-box'), revealMethod);
+};
 
 var animateServices = function() {
   var revealService = function() {
@@ -27,7 +37,7 @@ var animateServices = function() {
     });
   };
   
-  $.each($('.service-box'), revealService);
+  $.each($('.process-box'), revealService);
 };
 
 $(document).on('turbolinks:load', function() {
@@ -61,7 +71,14 @@ $(document).on('turbolinks:load', function() {
   });
 
   // Service box ease-in transition on scroll
-  var scrollDistance = $('#services').offset().top - $(window).height() + 200;
+  var scrollMethod = $('#method').offset().top - $(window).height() + 200;
+  var scrollDistance = $('#process').offset().top - $(window).height() + 200;
+  
+  $(window).scroll(function(event) {
+    if ($(window).scrollTop() >= scrollMethod) {
+      animateMethods();
+    }
+  });
   
   $(window).scroll(function(event) {
     if ($(window).scrollTop() >= scrollDistance) {

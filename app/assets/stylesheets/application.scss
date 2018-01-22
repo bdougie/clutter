@@ -31,19 +31,17 @@ html, body {
 body {
   color: #fff;
   padding-top: 70px;
-  position: relative;
-  min-height: auto;
   background-size: cover;
   -o-background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  background-image: url('header.jpg');
+  background-repeat: repeat;
+/*  background-color: #222;*/
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
-hr {
+hr.primary {
   border-color: #F05F40;
   border-width: 3px;
   max-width: 50px;
@@ -51,16 +49,14 @@ hr {
 
 hr.light {
   border-color: white;
+  border-width: 3px;
+  max-width: 50px;
 }
 
 hr.dark {
   border-color: #377BB5;
-}
-
-hr.service {
-  border-color: black;
-  border-width: 1px;
-  max-width: 100%;
+  border-width: 3px;
+  max-width: 50px;
 }
 
 p {
@@ -110,10 +106,6 @@ section {
 .bg-light {
   color: #222;
   background-color: #fff;
-}
-
-#error_explanation h2 {
-  display: none;
 }
 
 .navbar-default {

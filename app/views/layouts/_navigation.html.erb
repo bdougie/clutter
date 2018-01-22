@@ -13,17 +13,19 @@
         <ul class="nav navbar-nav navbar-right">
           <% if current_page?(root_path) && !user_signed_in? %>
             <li><a href="#about" class="js-scroll-trigger">About</a></li>
-            <li><a href="#services" class="js-scroll-trigger">Services</a></li>
+            <li><a href="#method" class="js-scroll-trigger">Method</a></li>
+            <li><a href="#process" class="js-scroll-trigger">Process</a></li>
             <li><a href="#team" class="js-scroll-trigger">Team</a></li>
-            <li><a href="#projects" class="js-scroll-trigger">Projects</a></li>
+            <li><a href="#portfolio" class="js-scroll-trigger">Portfolio</a></li>
             <li><%= link_to "Login", new_user_session_path %><li>
             <li><%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary sign-up' %><li>
           <% end %>
           <% if user_signed_in? %>
-            <li><%= link_to "Approach", '#' %></li>
-            <li><%= link_to "Preparation", '#' %></li>
-            <li><%= link_to "Service", service_agreement_path %></li>
+            <li><%= link_to "Approach", approach_path %></li>
+            <li><%= link_to "Services", services_path %></li>
+            <li><%= link_to "Portfolio", portfolio_path %></li>
             <li><%= link_to "Profile", edit_user_registration_path %></li>
+            <li><a href="#">Blog</a>
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
           <% end %>
           <% if !current_page?(root_path) && !user_signed_in? %>
