@@ -88,7 +88,7 @@ $(document).on('turbolinks:load', function() {
 
   // Typed Animation
   var header = {
-    strings: ["^300 One Bedroom at a Time^100", "^300 One Bathroom at a Time^100", "^300 One Living Room at a Time^100", "^300 One Kitchen at a Time^100", "^300 One Closet at a Time^100"],
+    strings: ["^300 One Bedroom at a Time^100", "^300 One Closet at a Time^100", "^300 One Living Room at a Time^100", "^300 One Kitchen at a Time^100", "^300 One Bathroom at a Time^100"],
     typeSpeed: 40,
     backSpeed: 10,
     smartBackspace: true,

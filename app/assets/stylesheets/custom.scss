@@ -1,9 +1,9 @@
 header .header-content {
+  width: 100%;
   position: relative;
   text-align: center;
   padding-top: 100px;
   padding-bottom: 100px;
-  width: 100%;
 }
 
 header .header-content .header-content-inner h1 {
@@ -27,11 +27,6 @@ header .header-content .header-content-inner p {
   font-size: 22px;
   margin-bottom: 50px;
   text-transform: uppercase;
-}
-
-h2.section-heading {
-  font-size: 40px;
-  margin-top: 0;
 }
 
 .method-box {
@@ -82,20 +77,20 @@ h2.section-heading {
   margin-bottom: 0;
 }
 
-.carousel {
-  margin: 0 auto;
-}
-
 .team {
   margin: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
+.carousel {
+  margin: 0 auto;
+}
+
 .testimonial {
   padding-top: 30px;
   padding-bottom: 30px;
-} 
+}
 
 .testimonial p {
   font-style: oblique;

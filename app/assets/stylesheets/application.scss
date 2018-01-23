@@ -24,73 +24,22 @@
 }*/
 
 html, body {
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 body {
   color: #fff;
   padding-top: 70px;
-  background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
+  background-image: url('header.jpg');
+  /*background-color: #222;*/
+  background-repeat: no-repeat;
   background-position: center;
-  background-repeat: repeat;
-/*  background-color: #222;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-}
-
-hr.primary {
-  border-color: #F05F40;
-  border-width: 3px;
-  max-width: 50px;
-}
-
-hr.light {
-  border-color: white;
-  border-width: 3px;
-  max-width: 50px;
-}
-
-hr.dark {
-  border-color: #377BB5;
-  border-width: 3px;
-  max-width: 50px;
-}
-
-p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-section {
-  padding: 100px 0;
-}
-
-.alert-success {
-  background-color: #499871;
-  border-color: transparent;
-  border-radius: 10px;
-  color: #ffffff;
-  font-size: 16px;
-}
-
-.alert-warning {
-  background-color: #984949;
-  border-color: transparent;
-  border-radius: 10px;
-  color: #ffffff;
-  font-size: 16px;
-}
-
-.wrap {
-  width: 100%;
-}
-
-.no-padding {
-  padding: 0;
 }
 
 .bg-primary {
@@ -106,6 +55,59 @@ section {
 .bg-light {
   color: #222;
   background-color: #fff;
+}
+
+section {
+  padding: 100px 0;
+}
+
+h2.section-heading {
+  margin-top: 0;
+  font-size: 40px;
+}
+
+hr {
+  max-width: 50px;
+  border-width: 3px;
+  border-color: #F05F40;
+}
+
+hr.light {
+  border-color: #fff;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.content {
+  margin: 30px auto;
+}
+
+.form {
+  margin: 100px auto;
+}
+
+.alert-success {
+  color: #ffffff;
+  font-size: 16px;
+  background-color: #499871;
+  border-color: transparent;
+  border-radius: 10px;
+}
+
+.alert-warning {
+  color: #ffffff;
+  font-size: 16px;
+  background-color: #984949;
+  border-color: transparent;
+  border-radius: 10px;
+}
+
+.wrap {
+  width: 100%;
 }
 
 .navbar-default {
@@ -140,13 +142,9 @@ section {
 }
 
 a.btn.btn-primary.sign-up {
-  margin-top: 5px;
   padding: 8px;
+  margin-top: 5px;
   border-radius: 4px;
-}
-
-.form {
-  margin-top: 100px;
 }
 
 .btn-primary,
@@ -212,9 +210,6 @@ a.btn.btn-primary.sign-up {
     color: #222;
   }
   .navbar-default.scroll .nav > li > a:hover {
-    color: #F05F40;
-  }
-  .active {
     color: #F05F40;
   }
   a.btn.btn-primary.sign-up.scroll,

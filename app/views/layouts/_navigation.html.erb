@@ -23,10 +23,9 @@
           <% if user_signed_in? %>
             <li><%= link_to "Approach", approach_path %></li>
             <li><%= link_to "Services", services_path %></li>
-            <li><%= link_to "Portfolio", portfolio_path %></li>
             <li><%= link_to "Profile", edit_user_registration_path %></li>
-            <li><a href="#">Blog</a>
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+            <li><a href="#" class="btn btn-primary sign-up">Blog</a>
           <% end %>
           <% if !current_page?(root_path) && !user_signed_in? %>
             <li><%= link_to "Login", new_user_session_path %><li>
