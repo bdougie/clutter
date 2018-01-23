@@ -31,8 +31,6 @@ html, body {
 body {
   color: #fff;
   padding-top: 70px;
-  background-image: url('header.jpg');
-  /*background-color: #222;*/
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
@@ -40,6 +38,10 @@ body {
   -o-background-size: cover;
   background-size: cover;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.bg-image {
+  background-image: url('header.jpg');
 }
 
 .bg-primary {
