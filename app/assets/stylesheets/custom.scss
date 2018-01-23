@@ -85,6 +85,12 @@ header .header-content .header-content-inner p {
 
 .carousel {
   margin: 0 auto;
+  background-color: transparent;
+}
+
+a.left.carousel-control, 
+a.right.carousel-control {
+  background-image: none;
 }
 
 .testimonial {
@@ -100,6 +106,18 @@ header .header-content .header-content-inner p {
 
 .packages {
   margin-bottom: 50px;
+}
+
+.caption h3 {
+  color: #F05F40;
+}
+
+div.thumbnail {
+  padding: 35px;
+}
+
+.thumbnail p {
+  color: #fff;
 }
 
 footer {
@@ -139,9 +157,6 @@ footer p {
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
-  }
-  .packages {
-    
   }
 }
 

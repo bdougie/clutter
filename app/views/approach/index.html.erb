@@ -5,29 +5,46 @@
     </div>
   </div>
 </div>
-<div class="container">
-  <table class="table table-bordered">
-    <tbody>
-      <tr>
-        <td class="col-md-5 text-center"><%= image_tag "method/closet.png", size: "125x125"  %></td>
-        <td class="col-md-7"><p><strong style="color: #F05F40">When starting their decluttering journey, many people choose to start with their closet.</strong> The most common error we see in this area is an inefficient use of the space making closets seem a lot smaller than they actually are. We combat this issue by transforming closets from messy piles into a meticulous storage system.</p></td>
-      </tr>
-      <tr>
-        <td class="col-md-5 text-center"><%= image_tag "method/bedroom.png", size: "125x125"  %></td>
-        <td class="col-md-7"><p><strong style="color: #F05F40">Did you know we spend a third of our lives in our bedrooms sleeping?</strong> We transform our clients’ bedrooms into spaces that bring them happiness by promoting the belongings that cause the most joy, and efficiently storing infrequently used items.</p></td>
-      </tr>
-      <tr>
-        <td class="col-md-5 text-center"><%= image_tag "method/living.png", size: "125x125" %></td>
-        <td class="col-md-7"><p><strong style="color: #F05F40">The living room can set the tone for the entire house.</strong> This is the space where we host friends and family and spend quality time with our loved ones. We love transforming living rooms by getting rid of “stuff” to maximize space for people.</p></td>
-      </tr>
-      <tr>
-        <td class="col-md-5 text-center"><%= image_tag "method/kitchen.png", size: "125x125" %></td>
-        <td class="col-md-7"><p><strong style="color: #F05F40">Many clients don’t realize how many underutilized kitchen products they actually have in all their cabinets.</strong> We reassess all kitchen belongings to ensure we keep it neat and tidy, as well as increase the functionality of your kitchen by strategically placing your kitchenware and food.</p></td>
-      </tr>
-      <tr>
-        <td class="col-md-5 text-center"><%= image_tag "method/bathroom.png", size: "125x125" %></td>
-        <td class="col-md-7"><p><strong style="color: #F05F40">Cleaning the bathroom is no one's favorite chore but having an organized system will make it totally pain free and may even save you some money.</strong> We approach bathroom organization by creating systems that promote both organization and hygiene, and reduce waste by ensuring all those bathroom products don’t go to waste!</p></td>
-      </tr>
-    </tbody>
-  </table>
+<div class="container" style="margin-top: 50px">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner text-center" role="listbox">
+          <div class="item active">
+            <%= image_tag "method/closet.png", size: "300x300", style: "margin: 0 auto" %><br>
+            <p style="font-size: 18px"><strong style="color: #F05F40">When starting their decluttering journey, many people choose to start with their closet.</strong> The most common error we see in this area is an inefficient use of the space, making closets seem a lot smaller than they actually are. We combat this issue by transforming closets from messy piles into a meticulous storage system.</p>
+          </div>
+          <div class="item">
+            <%= image_tag "method/bedroom.png", size: "300x300", style: "margin: 0 auto"  %><br>
+            <p style="font-size: 18px"><strong style="color: #F05F40">Did you know we spend a third of our lives in our bedrooms sleeping?</strong> We transform our clients’ bedrooms into ideal working environments by promoting the belongings that cause the most joy, and efficiently storing away infrequently used items.</p>
+          </div>
+          <div class="item">
+            <%= image_tag "method/living.png", size: "300x300", style: "margin: 0 auto"  %><br>
+            <p style="font-size: 18px"><strong style="color: #F05F40">The living room can set the tone for the entire house.</strong> This is the space where we host friends and family, and spend quality time with our loved ones. We love transforming living rooms by getting rid of “stuff” to maximize space for people.</p>
+          </div>
+          <div class="item">
+            <%= image_tag "method/kitchen.png", size: "300x300", style: "margin: 0 auto"  %><br>
+            <p style="font-size: 18px"><strong style="color: #F05F40">Many clients don’t realize how many underutilized kitchen products they actually have scattered throughout their cabinets.</strong> We reassess all kitchen appliances to ensure a neat and tidy setting, as well as increase the functionality of your kitchen by strategically placing your kitchenware and food products.</p>
+          </div>
+          <div class="item">
+            <%= image_tag "method/bathroom.png", size: "300x300", style: "margin: 0 auto"  %><br>
+            <p style="font-size: 18px"><strong style="color: #F05F40">Cleaning the bathroom is no one's favorite chore but having an organized system will make it totally pain free and may even save you some money.</strong> We approach bathroom organization by creating systems that promote both efficiency and good hygiene, and reduce waste by ensuring all those bathroom products don’t go to waste!</p>
+          </div>
+        </div><br><br>
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
