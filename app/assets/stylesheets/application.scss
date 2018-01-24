@@ -59,6 +59,10 @@ body {
   background-color: #fff;
 }
 
+.orange {
+  color: #F05F40;
+}
+
 section {
   padding: 100px 0;
 }
@@ -66,6 +70,12 @@ section {
 h2.section-heading {
   margin-top: 0;
   font-size: 40px;
+}
+
+h2.content-heading {
+  margin-top: 0;
+  font-size: 40px;
+  color: #F05F40;
 }
 
 hr {

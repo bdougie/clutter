@@ -104,6 +104,24 @@ a.right.carousel-control {
   padding: 5px 10px;
 }
 
+.approach {
+  font-size: 18px;
+}
+
+.approach .img {
+  height: 2000px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.approach p {
+  margin-top: 10px;
+}
+
+.services {
+  font-size: 18px;
+}
+
 .packages {
   margin-bottom: 50px;
 }
@@ -126,8 +144,34 @@ footer {
 }
 
 footer p { 
+  width: 1132px;
   display: table-cell;
   vertical-align: middle;
+}
+
+p.copyright { 
+  text-align: left;
+}
+
+p.social-media {
+  text-align: right;
+}
+
+i.fa.fa-facebook-square.fa-2x {
+  color: white;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+i.fa.fa-instagram.fa-2x {
+  color: white;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+i.fa.fa-twitter-square.fa-2x {
+  color: white;
+  padding-left: 2px;
 }
 
 @media (min-width: 768px) {
@@ -157,6 +201,21 @@ footer p {
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .approach .img {
+    height: 300px;
+    width: 300px;
+  }
+  i.fa.fa-facebook-square {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  i.fa.fa-instagram {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  i.fa.fa-twitter-square {
+    padding-left: 5px;
   }
 }
 
