@@ -18,6 +18,10 @@
 //= require turbolinks
 //= require_tree .
 
+$(window).on('load',function(){
+  $('#myModal').modal('show');
+});
+
 var animateMethods = function() {
   var revealMethod = function() {
     $(this).css({
@@ -41,7 +45,6 @@ var animateServices = function() {
 };
 
 $(document).on('turbolinks:load', function() {
-
   // Clutter header animation
   $('.header-content-inner h1').addClass('animated pulse');
 

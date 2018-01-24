@@ -13,7 +13,9 @@
   <% else %> 
     <body id="home" class="bg-dark"> 
   <% end %>
-    <%= render 'layouts/modal' %>
+    <% if !user_signed_in? %>
+      <%= render 'layouts/modal' %>
+    <% end %>
     <%= render 'layouts/messages' %>
     <%= render 'layouts/navigation' %>
     <%= yield %>

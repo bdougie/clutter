@@ -94,6 +94,29 @@ p {
   margin-bottom: 20px;
 }
 
+.modal {
+  margin-top: 100px;
+}
+
+div.modal-content {
+  color: #fff;
+  margin: 0 auto;
+}
+
+div.modal-header {
+  background-color: #F05F40;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+div.modal-body {
+  color: #222;
+}
+
+div.modal-footer {
+  text-align: center;
+}
+
 .content {
   margin: 30px auto;
 }
