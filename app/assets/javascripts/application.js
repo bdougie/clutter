@@ -18,8 +18,11 @@
 //= require turbolinks
 //= require_tree .
 
-$(window).on('load',function(){
-  $('#myModal').modal('show');
+$(window).on('load',function() {
+  if (localStorage.getItem('popState') != 'shown') {
+    $('#myModal').modal('show');
+    localStorage.setItem('popState','shown')
+  }
 });
 
 var animateMethods = function() {
