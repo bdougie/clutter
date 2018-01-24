@@ -84,13 +84,44 @@ header .header-content .header-content-inner p {
 }
 
 .carousel {
-  margin: 0 auto;
   background-color: transparent;
 }
 
 a.left.carousel-control, 
 a.right.carousel-control {
   background-image: none;
+}
+
+.carousel-inner .img {
+  height: 250px;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.carousel-inner p {
+  font-size: 16px;
+}
+
+.services {
+  font-size: 18px;
+}
+
+.packages {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 50px;
+}
+
+div.thumbnail {
+  padding: 35px;
+}
+
+.caption h3 {
+  color: #F05F40;
+}
+
+.thumbnail p {
+  color: #fff;
 }
 
 .testimonial {
@@ -102,40 +133,6 @@ a.right.carousel-control {
   font-style: oblique;
   font-size: 18px;
   padding: 5px 10px;
-}
-
-.approach {
-  font-size: 18px;
-}
-
-.approach .img {
-  height: 2000px;
-  width: 200px;
-  margin: 0 auto;
-}
-
-.approach p {
-  margin-top: 10px;
-}
-
-.services {
-  font-size: 18px;
-}
-
-.packages {
-  margin-bottom: 50px;
-}
-
-.caption h3 {
-  color: #F05F40;
-}
-
-div.thumbnail {
-  padding: 35px;
-}
-
-.thumbnail p {
-  color: #fff;
 }
 
 footer {
@@ -202,9 +199,15 @@ i.fa.fa-twitter-square.fa-2x {
     margin-left: auto;
     margin-right: auto;
   }
-  .approach .img {
+  .carousel-inner .img {
     height: 300px;
     width: 300px;
+  }
+  .carousel-inner p {
+    font-size: 18px;
+  }
+  .packages {
+    margin: 0px;
   }
   i.fa.fa-facebook-square {
     padding-left: 5px;
