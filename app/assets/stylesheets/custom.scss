@@ -83,6 +83,10 @@ header .header-content .header-content-inner p {
   padding-bottom: 20px;
 }
 
+.approach {
+  font-size: 18px;
+}
+
 .carousel {
   background-color: transparent;
 }
@@ -103,16 +107,16 @@ a.right.carousel-control {
   font-size: 16px;
 }
 
-span.approach.glyphicon.glyphicon-chevron-left {
+span.arrows.glyphicon.glyphicon-chevron-left {
   margin-top: -125px;
 }
 
-span.approach.glyphicon.glyphicon-chevron-right {
+span.arrows.glyphicon.glyphicon-chevron-right {
   margin-top: -125px;
 }
 
 .services {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .packages {
@@ -208,6 +212,9 @@ i.fa.fa-twitter-square.fa-2x {
     margin-left: auto;
     margin-right: auto;
   }
+  .approach {
+    font-size: 20px;
+  }
   .carousel-inner .img {
     height: 600px;
     width: 650px;
@@ -215,13 +222,16 @@ i.fa.fa-twitter-square.fa-2x {
   .carousel-inner p {
     font-size: 18px;
   }
-  span.approach.glyphicon.glyphicon-chevron-left {
+  span.arrows.glyphicon.glyphicon-chevron-left {
     margin-left: 25px;
     margin-top: -100px;
   }
-  span.approach.glyphicon.glyphicon-chevron-right {
+  span.arrows.glyphicon.glyphicon-chevron-right {
     margin-right: 25px;
     margin-top: -100px;
+  }
+  .services {
+    font-size: 16px;
   }
   .packages {
     margin: 0px;
