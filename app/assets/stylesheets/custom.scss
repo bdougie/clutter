@@ -103,6 +103,14 @@ a.right.carousel-control {
   font-size: 16px;
 }
 
+span.approach.glyphicon.glyphicon-chevron-left {
+  margin-top: -125px;
+}
+
+span.approach.glyphicon.glyphicon-chevron-right {
+  margin-top: -125px;
+}
+
 .services {
   font-size: 18px;
 }
@@ -202,10 +210,18 @@ i.fa.fa-twitter-square.fa-2x {
   }
   .carousel-inner .img {
     height: 600px;
-    width: 600px;
+    width: 650px;
   }
   .carousel-inner p {
     font-size: 18px;
+  }
+  span.approach.glyphicon.glyphicon-chevron-left {
+    margin-left: 25px;
+    margin-top: -100px;
+  }
+  span.approach.glyphicon.glyphicon-chevron-right {
+    margin-right: 25px;
+    margin-top: -100px;
   }
   .packages {
     margin: 0px;
