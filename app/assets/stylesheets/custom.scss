@@ -100,11 +100,16 @@ a.right.carousel-control {
   height: 350px;
   width: 350px;
   margin: 0 auto;
-  border: 5px solid #F05F40;
+  border: 5px solid #fff;
 }
 
 .carousel-inner p {
   font-size: 16px;
+  color: #fff;
+}
+
+.carousel-inner strong {
+  color: #F05F40;
 }
 
 span.arrows.glyphicon.glyphicon-chevron-left {
