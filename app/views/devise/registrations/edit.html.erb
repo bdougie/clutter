@@ -13,16 +13,16 @@
           <%= f.email_field :email, class: 'form-control', placeholder: "Email" %>
         </div>
         <div class="form-group">
-          <%= f.label :phone_number, style: 'text-transform: capitalize' %>
+          <%= f.label :phone %>
           <%= f.telephone_field :phone_number, :maxlength => 10, class: 'form-control', placeholder: "Phone Number" %>
         </div>
         <div class="form-group">
-          <%= f.label :new_password, style: 'text-transform: capitalize' %>
-          <%= f.password_field :password, class: 'form-control', placeholder: "New Password" %>
+          <%= f.label :services %>
+          <%= f.select :service, ['Package A ($150)', 'Package B ($280)', 'Package C ($390)'], {}, {class: "form-control"} %>
         </div>
         <div class="form-group">
-          <%= f.label :password_confirmation, style: 'text-transform: capitalize' %>
-          <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "Password Confirmation" %>
+          <%= f.label :appointment %>
+          <%= f.datetime_field :appointment, class: 'form-control', placeholder: "Appointment" %>
         </div>
       </div>
       <div class="col-md-4" style="text-align: left">
@@ -41,10 +41,6 @@
         <div class="form-group">
           <%= f.label :zip_code, style: 'text-transform: capitalize' %>
           <%= f.text_field :zip, :maxlength => 5, class: 'form-control', placeholder: "Zip Code" %>
-        </div>
-        <div class="form-group">
-          <%= f.label :appointment %>
-          <%= f.datetime_field :appointment, class: 'form-control', placeholder: "Appointment" %>
         </div>
       </div>
     </div><br>
