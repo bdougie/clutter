@@ -148,8 +148,8 @@ div.thumbnail {
 }
 
 .testimonial .tweet {
-  height: 185px;
-  width: 500px;
+  height: 130px;
+  width: 350px;
   border-radius: 10px;
   border: 3px solid #2AA3EF;
 }
@@ -227,6 +227,12 @@ i.fa.fa-twitter-square.fa-2x {
   .approach {
     font-size: 20px;
   }
+  .testimonial .tweet {
+    height: 148px;
+    width: 400px;
+    border-radius: 10px;
+    border: 3px solid #2AA3EF;
+  }
   .carousel-inner .img {
     height: 475px;
     width: 525px;
@@ -275,5 +281,14 @@ i.fa.fa-twitter-square.fa-2x {
   .team {
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .testimonial .tweet {
+    height: 185px;
+    width: 500px;
+    border-radius: 10px;
+    border: 3px solid #2AA3EF;
   }
 }

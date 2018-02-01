@@ -1,7 +1,7 @@
 class RegistrationsController < Devise::RegistrationsController
 
   def refer_user 
-    UserMailer.referral_email(resource, params)
+    UserMailer.referral_email(resource, referral_params)
   end
 
   private
@@ -20,7 +20,7 @@ class RegistrationsController < Devise::RegistrationsController
                                  :phone_number, :street_address, :city, :state, :zip, :appointment)
   end
 
-  def refer_user 
+  def referral_params 
     params.require(:user).permit(:name, :email)
   end
 end
