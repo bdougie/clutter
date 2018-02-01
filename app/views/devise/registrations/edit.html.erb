@@ -6,41 +6,41 @@
       <div class="col-md-4 col-md-offset-2">
         <div class="form-group">
           <%= f.label :name %>
-          <%= f.text_field :name, class: 'form-control', placeholder: "Name" %>
+          <%= f.text_field :name, class: 'form-control', placeholder: "John Doe" %>
         </div>
         <div class="form-group">
           <%= f.label :email %>
-          <%= f.email_field :email, class: 'form-control', placeholder: "Email" %>
+          <%= f.email_field :email, class: 'form-control', placeholder: "john@example.com" %>
         </div>
         <div class="form-group">
           <%= f.label :phone %>
-          <%= f.telephone_field :phone_number, :maxlength => 10, class: 'form-control', placeholder: "Phone Number" %>
+          <%= f.telephone_field :phone_number, :maxlength => 10, class: 'form-control', placeholder: "5552588837" %>
         </div>
         <div class="form-group">
-          <%= f.label :services %>
-          <%= f.select :service, ['Package A ($150)', 'Package B ($280)', 'Package C ($390)'], {}, {class: "form-control"} %>
+          <%= f.label :service %>
+          <%= f.select(:service, [['Starter Package - $150 (1 Session)', 'Starter'], ['Standard Package - $280 (2 Sessions)', 'Standard'], ['Premium Package - $390 (3 Sessions)', 'Premium']], {}, { class: 'form-control' }) %> 
         </div>
         <div class="form-group">
           <%= f.label :appointment %>
-          <%= f.datetime_field :appointment, class: 'form-control', placeholder: "Appointment" %>
+          <%= f.datetime_field :appointment, class: 'form-control' %>
         </div>
       </div>
       <div class="col-md-4" style="text-align: left">
         <div class="form-group">
           <%= f.label :street_address, style: 'text-transform: capitalize' %>
-          <%= f.text_field :street_address, class: 'form-control', placeholder: "Street Address" %>
+          <%= f.text_field :street_address, class: 'form-control', placeholder: "123 Main Street, Unit 21" %>
         </div>
         <div class="form-group">
           <%= f.label :city %>
-          <%= f.text_field :city, class: 'form-control', placeholder: "City" %>
+          <%= f.text_field :city, class: 'form-control', placeholder: "New York City" %>
         </div>
         <div class="form-group">
           <%= f.label :state %>
-          <%= f.text_field :state, :maxlength => 2, class: 'form-control', placeholder: "State" %>
+          <%= f.text_field :state, :maxlength => 2, class: 'form-control', placeholder: "NY" %>
         </div>
         <div class="form-group">
           <%= f.label :zip_code, style: 'text-transform: capitalize' %>
-          <%= f.text_field :zip, :maxlength => 5, class: 'form-control', placeholder: "Zip Code" %>
+          <%= f.text_field :zip, :maxlength => 5, class: 'form-control', placeholder: "10001" %>
         </div>
       </div>
     </div><br>

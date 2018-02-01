@@ -1,7 +1,9 @@
 class RegistrationsController < Devise::RegistrationsController
 
-  def refer_user 
-    UserMailer.referral_email(resource, referral_params)
+  def edit
+    # if query_param
+    #   resource.service = query_param
+    # end
   end
 
   private
@@ -17,10 +19,11 @@ class RegistrationsController < Devise::RegistrationsController
 
   def account_update_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :current_password,
-                                 :phone_number, :street_address, :city, :state, :zip, :appointment)
+                                 :phone_number, :street_address, :city, :state, :zip, :appointment, :service)
   end
 
-  def referral_params 
-    params.require(:user).permit(:name, :email)
+  def after_update_path_for(resource)
+    edit_user_registration_path(resource)
   end
+
 end

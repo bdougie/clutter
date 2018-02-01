@@ -9,7 +9,7 @@ admin = User.new(
   city: 'Oakland',
   state: 'CA',
   zip: '94612',
-  service: 'Package A',
+  service: 'Standard',
   appointment: '2018-04-20 16:20:00'
 )
 admin.skip_confirmation!
@@ -25,7 +25,7 @@ admin.save!
     city: Faker::Address.city,
     state: Faker::Address.state_abbr,
     zip: Faker::Address.zip_code,
-    service: 'Package B',
+    service: 'Starter',
     appointment: Faker::Date.forward(365)
   )
   user.skip_confirmation!
@@ -42,7 +42,7 @@ end
     city: Faker::Address.city,
     state: Faker::Address.state_abbr,
     zip: Faker::Address.zip_code,
-    service: 'Package C',
+    service: 'Premium',
     appointment: Faker::Date.forward(365)
   )
   user.skip_confirmation!
