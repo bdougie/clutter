@@ -7,6 +7,6 @@ class UserMailer < ApplicationMailer
   def referral_email(from, to)
     @user = from
     @referral_name = to[:name]
-    mail(to: to[:email], subject: "You have been referred by '#{@user.name}' to join Clutter")
+    mail(to: to[:email], subject: "You have been referred by #{@user.name}")
   end
 end
