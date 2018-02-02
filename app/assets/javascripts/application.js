@@ -76,7 +76,7 @@ $(document).on('turbolinks:load', function() {
     }
   });
 
-  // Service box ease-in transition on scroll
+  // Method and Service box ease-in transition on scroll
   var scrollMethod = $('#method').offset().top - $(window).height() + 200;
   var scrollDistance = $('#process').offset().top - $(window).height() + 200;
   
