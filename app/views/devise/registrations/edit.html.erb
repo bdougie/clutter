@@ -13,6 +13,53 @@
           <%= f.email_field :email, class: 'form-control', placeholder: "john@example.com" %>
         </div>
         <div class="form-group">
+          <%= f.label :phone %>
+          <%= f.telephone_field :phone_number, :maxlength => 10, class: 'form-control', placeholder: "5552588837" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :service %>
+          <%= f.select(:service, [['Starter Package - $150 (1 Session)', 'Starter'], ['Standard Package - $280 (2 Sessions)', 'Standard'], ['Premium Package - $390 (3 Sessions)', 'Premium']], {}, { class: 'form-control' }) %> 
+        </div>
+        <% if resource.service == "Starter" %>
+          <div class="form-group">
+            <%= f.label :appointment, style: 'text-transform: capitalize' %>
+            <%= f.datetime_field :appointment, class: 'form-control' %>
+          </div>
+        <% end %>
+        <% if resource.service == "Standard" %>
+          <% if Time.zone.now < resource.appointment %> 
+            <div class="form-group">
+              <%= f.label :appointment_session_1, style: 'text-transform: capitalize' %>
+              <%= f.datetime_field :appointment, class: 'form-control' %>
+            </div>
+          <% else %>
+            <div class="form-group">
+              <%= f.label :appointment_session_2, style: 'text-transform: capitalize' %>
+              <%= f.datetime_field :second_appointment, class: 'form-control' %>
+            </div>
+          <% end %>
+        <% end %>
+        <% if resource.service == "Premium" %>
+          <% if Time.zone.now < resource.appointment %>
+            <div class="form-group">
+              <%= f.label :appointment_session_1, style: 'text-transform: capitalize' %>
+              <%= f.datetime_field :appointment, class: 'form-control' %>
+            </div>
+          <% elsif Time.zone.now > resource.appointment && Time.zone.now < resource.second_appointment %>
+            <div class="form-group">
+              <%= f.label :appointment_session_2, style: 'text-transform: capitalize' %>
+              <%= f.datetime_field :second_appointment, class: 'form-control' %>
+            </div>
+          <% elsif Time.zone.now > resource.second_appointment %>
+            <div class="form-group">
+              <%= f.label :appointment_session_3, style: 'text-transform: capitalize' %>
+              <%= f.datetime_field :third_appointment, class: 'form-control' %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="col-md-4" style="text-align: left">
+        <div class="form-group">
           <%= f.label :street_address, style: 'text-transform: capitalize' %>
           <%= f.text_field :street_address, class: 'form-control', placeholder: "123 Main Street, Unit 21" %>
         </div>
@@ -28,32 +75,6 @@
           <%= f.label :zip_code, style: 'text-transform: capitalize' %>
           <%= f.text_field :zip, :maxlength => 5, class: 'form-control', placeholder: "10001" %>
         </div>
-      </div>
-      <div class="col-md-4" style="text-align: left">
-        <div class="form-group">
-          <%= f.label :phone %>
-          <%= f.telephone_field :phone_number, :maxlength => 10, class: 'form-control', placeholder: "5552588837" %>
-        </div>
-        <div class="form-group">
-          <%= f.label :service %>
-          <%= f.select(:service, [['Starter Package - $150 (1 Session)', 'Starter'], ['Standard Package - $280 (2 Sessions)', 'Standard'], ['Premium Package - $390 (3 Sessions)', 'Premium']], {}, { class: 'form-control' }) %> 
-        </div>
-        <div class="form-group">
-          <%= f.label :appointment_session_1, style: 'text-transform: capitalize' %>
-          <%= f.datetime_field :appointment, class: 'form-control' %>
-        </div>
-        <% if resource.service == "Standard" || resource.service == "Premium" %>
-          <div class="form-group">
-            <%= f.label :appointment_session_2, style: 'text-transform: capitalize' %>
-            <%= f.datetime_field :second_appointment, class: 'form-control' %>
-          </div>
-        <% end %>
-        <% if resource.service == "Premium" %>
-          <div class="form-group">
-            <%= f.label :appointment_session_3, style: 'text-transform: capitalize' %>
-            <%= f.datetime_field :third_appointment, class: 'form-control' %>
-          </div>
-        <% end %>
       </div>
     </div><br>
     <div class="row">
