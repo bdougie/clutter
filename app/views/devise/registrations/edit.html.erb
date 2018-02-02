@@ -27,7 +27,7 @@
           </div>
         <% end %>
         <% if resource.service == "Standard" %>
-          <% if Time.zone.now < resource.appointment %> 
+          <% if (Time.zone.now - 8.hours) < resource.appointment %> 
             <div class="form-group">
               <%= f.label :appointment_session_1, style: 'text-transform: capitalize' %>
               <%= f.datetime_field :appointment, class: 'form-control' %>
@@ -40,17 +40,17 @@
           <% end %>
         <% end %>
         <% if resource.service == "Premium" %>
-          <% if Time.zone.now < resource.appointment %>
+          <% if (Time.zone.now - 8.hours) < resource.appointment %>
             <div class="form-group">
               <%= f.label :appointment_session_1, style: 'text-transform: capitalize' %>
               <%= f.datetime_field :appointment, class: 'form-control' %>
             </div>
-          <% elsif Time.zone.now > resource.appointment && Time.zone.now < resource.second_appointment %>
+          <% elsif ((Time.zone.now - 8.hours) > resource.appointment) && ((Time.zone.now - 8.hours) < resource.second_appointment) %>
             <div class="form-group">
               <%= f.label :appointment_session_2, style: 'text-transform: capitalize' %>
               <%= f.datetime_field :second_appointment, class: 'form-control' %>
             </div>
-          <% elsif Time.zone.now > resource.second_appointment %>
+          <% elsif (Time.zone.now - 8.hours) > resource.second_appointment %>
             <div class="form-group">
               <%= f.label :appointment_session_3, style: 'text-transform: capitalize' %>
               <%= f.datetime_field :third_appointment, class: 'form-control' %>
