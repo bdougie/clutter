@@ -22,6 +22,7 @@ gem 'figaro'
 gem 'faker'
 gem 'animate-rails'
 gem 'jquery-easing-rails'
+gem 'activeadmin'
 
 
 group :development, :test do

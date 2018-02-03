@@ -1,6 +1,6 @@
 require 'faker'
 
-admin = User.new(
+sam = User.new(
   name: 'Sahil Mehta',
   email: 'samehta91@gmail.com',
   password: 'password',
@@ -10,10 +10,11 @@ admin = User.new(
   state: 'CA',
   zip: '94612',
   service: 'Standard',
-  appointment: '2018-04-20 16:20:00'
+  appointment: '2018-02-08 16:20:00',
+  second_appointment: '2018-02-15 16:20:00'
 )
-admin.skip_confirmation!
-admin.save!
+sam.skip_confirmation!
+sam.save!
 
 5.times do
   user = User.new(
@@ -26,7 +27,7 @@ admin.save!
     state: Faker::Address.state_abbr,
     zip: Faker::Address.zip_code,
     service: 'Starter',
-    appointment: Faker::Date.forward(365)
+    appointment: Faker::Date.forward(30)
   )
   user.skip_confirmation!
   user.save!
@@ -43,13 +44,15 @@ end
     state: Faker::Address.state_abbr,
     zip: Faker::Address.zip_code,
     service: 'Premium',
-    appointment: Faker::Date.forward(365)
+    appointment: Faker::Date.forward(10),
+    second_appointment: Faker::Date.forward(20),
+    third_appointment: Faker::Date.forward(30)
   )
   user.skip_confirmation!
   user.save!
 end
 
-users = User.all
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 
 puts "Seed finished"
 puts "#{User.count} users counted"

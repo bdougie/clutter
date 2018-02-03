@@ -1,8 +1,9 @@
 <div class="container form">
   <div class="row">
-    <h2 class="text-center section-heading">REFER A FRIEND</h2><br>
+    <h2 class="text-center section-heading">REFERRAL</h2>
     <%= form_with(url: refer_user_path, method: :post) do |f| %>
       <div class="col-md-4 col-md-offset-4">
+        <p class="text-center" style="font-size: 18px">Refer a friend and once they book a session with us, you will receive a 10% discount on your next session!</p>
         <div class="form-group">
           <%= f.label :name %>
           <%= f.text_field :name, class: 'form-control', placeholder: "Jane Doe" %>
