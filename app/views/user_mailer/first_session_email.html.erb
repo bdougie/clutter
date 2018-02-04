@@ -1,6 +1,6 @@
 <p>Hello <%= @user.name.split(' ').first %>,</p>
 <p>
-  We hope you are looking forward to your first session with Clutter on <%= @user.appointment %>. This process which you are about to experience is about more than just your posessions. It will truly change your daily habits and behaviors, allowing you to acheive the most optimal use of your space.
+  We hope you are just as excited as we are for your first session with Clutter! Your appointment is on <a href="https://clutterrfree.herokuapp.com/users/edit" style="text-decoration: none" target="_blank"><strong style="color: #F05F40"><%= @user.appointment.strftime("%A %B %e at %l:%M %P") %></strong></a>. The Clutter Process will truly change your daily habits and behaviors, allowing you to achieve the most optimal use of your space.
 </p>
 <p>
   Here are a few tips to help you get ready for the big day: 
@@ -8,10 +8,10 @@
 <ul>
   <li>Start thinking about the spaces that you want to focus on the most during our session together.</li>
   <li>Remove all obvious trash within those areas of your home. This will allow us to maximize the time spent organizing.</li>
-  <li>Envision what the ideal version of your home would look like, as this is what the goal will be for the day.</li>
+  <li>Envision what the ideal version of your home would look like, as this is what the goal for the day will be.</li>
 </ul>
 <p>
   Please do not hesitate to ask any questions. Thank you!
 </p>
-<p>- The Clutter Team</p>
+<p>Sincerely,<br>The Clutter Team</p>
 <h1 style="font-size: 30px; color: #F05F40; font-family: 'Open Sans', 'Helvetica Neue'">C L U T T E R</h1>

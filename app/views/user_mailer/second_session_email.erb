@@ -1,6 +1,6 @@
 <p>Hello <%= @user.name.split(' ').first %>,</p>
 <p>
-  We hope you are looking forward to your next session with Clutter. Your appointment is on <%= @user.second_appointment %>.
+  We hope you are looking forward to your next session with Clutter. Your appointment is on <a href="https://clutterrfree.herokuapp.com/users/edit" style="text-decoration: none" target="_blank"><strong style="color: #F05F40"><%= @user.second_appointment.strftime("%A %B %e at %l:%M %P") %></strong></a>.
 </p>
 <p>
   As a reminder, here are a few tips to help you prepare for our next visit: 
@@ -13,5 +13,5 @@
 <p>
   Please do not hesitate to ask any questions. Thank you!
 </p>
-<p>- The Clutter Team</p>
+<p>Sincerely,<br>The Clutter Team</p>
 <h1 style="font-size: 30px; color: #F05F40; font-family: 'Open Sans', 'Helvetica Neue'">C L U T T E R</h1>

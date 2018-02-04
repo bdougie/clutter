@@ -20,13 +20,13 @@
           <%= f.label :service %>
           <%= f.select(:service, [['Starter Package - $150 (1 Session)', 'Starter'], ['Standard Package - $280 (2 Sessions)', 'Standard'], ['Premium Package - $390 (3 Sessions)', 'Premium']], {}, { class: 'form-control' }) %> 
         </div>
-        <% if resource.service == "Starter" %>
+        <% if (resource.service == "Starter") || (resource.service == '') %>
           <div class="form-group">
             <%= f.label :appointment, style: 'text-transform: capitalize' %>
             <%= f.datetime_field :appointment, class: 'form-control' %>
           </div>
         <% end %>
-        <% if resource.service == "Standard" %>
+        <% if (resource.service == "Standard") %>
           <% if (Time.zone.now - 8.hours) < resource.appointment %> 
             <div class="form-group">
               <%= f.label :appointment_session_1, style: 'text-transform: capitalize' %>
@@ -39,7 +39,7 @@
             </div>
           <% end %>
         <% end %>
-        <% if resource.service == "Premium" %>
+        <% if (resource.service == "Premium") %>
           <% if (Time.zone.now - 8.hours) < resource.appointment %>
             <div class="form-group">
               <%= f.label :appointment_session_1, style: 'text-transform: capitalize' %>
