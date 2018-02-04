@@ -18,6 +18,7 @@
 //= require turbolinks
 //= require_tree .
 
+
 $(window).on('load',function() {
   if (localStorage.getItem('popState') != 'shown') {
     $('#myModal').modal('show');
@@ -47,9 +48,22 @@ var animateServices = function() {
   $.each($('.process-box'), revealService);
 };
 
+
 $(document).on('turbolinks:load', function() {
+
   // Clutter header animation
   $('.header-content-inner h1').addClass('animated pulse');
+
+  // Typed Animation
+  var header = {
+    strings: ["^300 One Bedroom at a Time^100", "^300 One Closet at a Time^100", "^300 One Living Room at a Time^100", "^300 One Kitchen at a Time^100", "^300 One Bathroom at a Time^100"],
+    typeSpeed: 40,
+    backSpeed: 10,
+    smartBackspace: true,
+    loop: true
+  }
+
+  var typed = new Typed(".header-content-inner .typed", header);
 
   // Navbar color change on scroll
   $(window).scroll(function() {
@@ -70,7 +84,7 @@ $(document).on('turbolinks:load', function() {
       if (target.length) {
         $('html, body').animate({
           scrollTop: (target.offset().top - 54)
-        }, 1500, "easeInOutExpo");
+        }, 1500, "swing");
         return false;
       }
     }
@@ -91,16 +105,5 @@ $(document).on('turbolinks:load', function() {
       animateServices();
     }
   });
-
-  // Typed Animation
-  var header = {
-    strings: ["^300 One Bedroom at a Time^100", "^300 One Closet at a Time^100", "^300 One Living Room at a Time^100", "^300 One Kitchen at a Time^100", "^300 One Bathroom at a Time^100"],
-    typeSpeed: 40,
-    backSpeed: 10,
-    smartBackspace: true,
-    loop: true
-  }
-
-  var typed = new Typed(".header-content-inner .typed", header);
 
 });
