@@ -1,7 +1,7 @@
-# [Clutter](https://clutterrfree.herokuapp.com)
+# [C L U T T E R](https://clutterrfree.herokuapp.com)
 
 Based on years of proven tactics and strategies, our team of professional organizers will guide you through a step by step process that will change the way you live your life. Throughout the process, you will be provided with expertise in space efficiency, habit forming, and sustainable systems. These personalized solutions will empower you to think beyond your physical possessions and focus on a clutter-free lifestyle.
-<hr>
+
 <h3>The Clutter Method</h3>
 <p>Declutter. Organize. Maintain.</p>
 <ul>
@@ -17,4 +17,3 @@ Based on years of proven tactics and strategies, our team of professional organi
   <li><strong>Assessment:</strong> The first 30 minutes of the at-home session will include a tour and assessment of the space. We will discuss the specific approach for the day.</li>
   <li><strong>Transformation:</strong> For the duration of the session, we will collaborate with you on executing our approach to meet your goals, leaving you with a calm and welcoming space to live and work.</li>
 </ul>
-<hr>
