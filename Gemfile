@@ -21,7 +21,6 @@ gem 'devise'
 gem 'figaro'
 gem 'faker'
 gem 'animate-rails'
-gem 'jquery-easing-rails'
 gem 'activeadmin'
 
 

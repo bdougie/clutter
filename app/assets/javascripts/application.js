@@ -12,7 +12,6 @@
 //
 //= require rails-ujs
 //= require jquery
-//= require jquery.easing
 //= require bootstrap-sprockets
 //= require typed.js/lib/typed
 //= require turbolinks
@@ -84,7 +83,7 @@ $(document).on('turbolinks:load', function() {
       if (target.length) {
         $('html, body').animate({
           scrollTop: (target.offset().top - 54)
-        }, 1500, "swing");
+        }, 1500, "easeInOutExpo");
         return false;
       }
     }

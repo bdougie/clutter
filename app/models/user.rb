@@ -7,14 +7,20 @@ class User < ApplicationRecord
   end
 
   def before_first_session
-    UserMailer.first_session_email(self).deliver
+    if (self.appointment == (Time.zone.now - 48.hours))
+      UserMailer.first_session_email(self).deliver
+    end
   end
 
   def before_second_session
-    UserMailer.second_session_email(self).deliver
+    if (self.second_appointment == (Time.zone.now - 48.hours))
+      UserMailer.second_session_email(self).deliver
+    end
   end
 
   def before_third_session
-    UserMailer.third_session_email(self).deliver
+    if (self.third_appointment == (Time.zone.now - 48.hours))
+      UserMailer.third_session_email(self).deliver
+    end
   end
 end
