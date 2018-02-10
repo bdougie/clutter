@@ -264,6 +264,29 @@ a.btn.btn-primary.sign-up:hover {
 }
 
 @media (max-width: 992px) {
+  .navbar-default {
+    background-color: white;
+    border-color: rgba(34, 34, 34, 0.05);
+  }
+  .navbar-default .navbar-header .navbar-brand {
+    color: #F05F40;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .navbar-default .navbar-header .navbar-brand:hover {
+    color: #eb3812;
+  }
+  .navbar-default .nav > li > a {
+    color: #222;
+    font-weight: 550;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  .navbar-default .nav > li > a:hover {
+    color: #F05F40;
+  }
   .navbar-header {
     float: none;
   }
