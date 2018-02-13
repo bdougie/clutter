@@ -46,7 +46,7 @@ body {
 
 .bg-primary {
   color: #fff;
-  background-color: #F05F40;
+  background-color: #008080;
 }
 
 .bg-dark {
@@ -57,10 +57,6 @@ body {
 .bg-light {
   color: #222;
   background-color: #fff;
-}
-
-.orange {
-  color: #F05F40;
 }
 
 section {
@@ -75,13 +71,13 @@ h2.section-heading {
 h2.content-heading {
   margin-top: 0;
   font-size: 40px;
-  color: #F05F40;
+  color: #008080;
 }
 
 hr {
   max-width: 50px;
-  border-width: 3px;
-  border-color: #F05F40;
+  border-width: 5px;
+  border-color: #008080;
 }
 
 hr.light {
@@ -104,7 +100,7 @@ div.modal-content {
 }
 
 div.modal-header {
-  background-color: #F05F40;
+  background-color: #008080;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -154,7 +150,7 @@ div.modal-footer {
 }
 
 .navbar-default .navbar-header .navbar-brand {
-  color: #F05F40;
+  color: #008080;
   font-weight: 700;
   font-size: 24px;
   letter-spacing: 3px;
@@ -162,7 +158,7 @@ div.modal-footer {
 }
 
 .navbar-default .navbar-header .navbar-brand:hover {
-  color: #eb3812;
+  color: #006666;
 }
 
 .navbar-default .nav > li > a {
@@ -173,7 +169,7 @@ div.modal-footer {
 }
 
 .navbar-default .nav > li > a:hover {
-  color: #F05F40;
+  color: #008080;
 }
 
 a.btn.btn-primary.sign-up {
@@ -191,14 +187,14 @@ a.btn.btn-primary.sign-up:hover {
 .btn-primary:visited {
   border-radius: 0;
   border: 2px solid white !important;
-  background-color: #F05F40 !important;
+  background-color: #008080 !important;
 }
 
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:focus {
   border: 2px solid white !important;
-  background-color: #eb3812 !important;
+  background-color: #006666 !important;
 }
 
 .shared-links,
@@ -210,7 +206,7 @@ a.btn.btn-primary.sign-up:hover {
 .shared-links:hover,
 .shared-links:active,
 .shared-links:focus {
-  color: #F05F40 !important;
+  color: #008080 !important;
   text-decoration : none !important;
 }
 
@@ -242,7 +238,7 @@ a.btn.btn-primary.sign-up:hover {
     padding-bottom: 7px;
   }
   .navbar-default.scroll .navbar-header .navbar-brand {
-    color: #F05F40;
+    color: #008080;
   }
   .navbar-default.scroll .nav > li > a,
   .navbar-default.scroll .nav > li > a:visited,
@@ -250,7 +246,7 @@ a.btn.btn-primary.sign-up:hover {
     color: #222;
   }
   .navbar-default.scroll .nav > li > a:hover {
-    color: #F05F40;
+    color: #008080;
   }
   a.btn.btn-primary.sign-up.scroll,
   a.btn.btn-primary.sign-up.scroll:hover {
@@ -264,14 +260,14 @@ a.btn.btn-primary.sign-up:hover {
     border-color: rgba(34, 34, 34, 0.05);
   }
   .navbar-default .navbar-header .navbar-brand {
-    color: #F05F40;
+    color: #008080;
     font-weight: 700;
     font-size: 24px;
     letter-spacing: 3px;
     text-transform: uppercase;
   }
   .navbar-default .navbar-header .navbar-brand:hover {
-    color: #eb3812;
+    color: #006666;
   }
   .navbar-default .nav > li > a {
     color: #222;
@@ -280,7 +276,7 @@ a.btn.btn-primary.sign-up:hover {
     text-transform: uppercase;
   }
   .navbar-default .nav > li > a:hover {
-    color: #F05F40;
+    color: #008080;
   }
   .navbar-header {
     float: none;

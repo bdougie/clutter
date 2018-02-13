@@ -36,22 +36,30 @@ header .header-content .header-content-inner p {
   animation: blink 0.7s infinite;
 }
 
-@keyframes blink{
+@keyframes blink {
   0% { opacity:1; }
   50% { opacity:0; }
   100% { opacity:1; }
 }
 
-@-webkit-keyframes blink{
+@-webkit-keyframes blink {
   0% { opacity:1; }
   50% { opacity:0; }
   100% { opacity:1; }
 }
 
-@-moz-keyframes blink{
+@-moz-keyframes blink {
   0% { opacity:1; }
   50% { opacity:0; }
   100% { opacity:1; }
+}
+
+i.fa {
+  color: #008080;
+}
+
+i.fa.fa-copyright {
+  color: #fff;
 }
 
 .method-box {
@@ -149,6 +157,18 @@ span.arrows.glyphicon.glyphicon-chevron-right {
   font-size: 16px;
 }
 
+i.fa.fa-bed {
+  color: #fff;
+}
+
+i.fa.fa-home {
+  color: #fff;
+}
+
+i.fa.fa-building {
+  color: #fff;
+}
+
 .packages {
   margin-left: 20px;
   margin-right: 20px;
@@ -160,7 +180,7 @@ div.thumbnail {
 }
 
 .caption h3 {
-  color: #F05F40;
+  color: #008080;
 }
 
 .thumbnail p {
@@ -205,20 +225,20 @@ p.social-media {
   text-align: right;
 }
 
-i.fa.fa-facebook-square.fa-2x {
-  color: white;
+i.fa.fa-facebook-square {
+  color: #008080;
   padding-left: 2px;
   padding-right: 2px;
 }
 
-i.fa.fa-instagram.fa-2x {
-  color: white;
+i.fa.fa-instagram {
+  color: #008080;
   padding-left: 2px;
   padding-right: 2px;
 }
 
-i.fa.fa-twitter-square.fa-2x {
-  color: white;
+i.fa.fa-twitter-square {
+  color: #008080;
   padding-left: 2px;
 }
 
