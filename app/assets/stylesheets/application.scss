@@ -172,6 +172,11 @@ div.modal-footer {
   color: #008080;
 }
 
+.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:focus {
+  background-color: #fff;
+}
+
 a.btn.btn-primary.sign-up {
   color: #fff;
   padding: 8px;
