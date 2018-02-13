@@ -82,7 +82,7 @@ $(document).on('turbolinks:load', function() {
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
         $('html, body').animate({
-          scrollTop: (target.offset().top - 54)
+          scrollTop: (target.offset().top - 50)
         }, 1500, "easeInOutExpo");
         return false;
       }
