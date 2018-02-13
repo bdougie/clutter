@@ -12,16 +12,16 @@ class UserMailer < ApplicationMailer
 
   def first_session_email(user)
     @user = user
-    mail(to: @user.email, subject: "Your first session with Clutter is right around the corner")
+    mail(to: @user.email, subject: "Reminder: Your first session with Clutter is right around the corner")
   end
 
   def second_session_email(user)
     @user = user
-    mail(to: @user.email, subject: "Your next session with Clutter is right around the corner")
+    mail(to: @user.email, subject: "Reminder: Your next session with Clutter is right around the corner")
   end
 
   def third_session_email(user)
     @user = user
-    mail(to: @user.email, subject: "Your next session with Clutter is right around the corner")
+    mail(to: @user.email, subject: "Reminder: Your next session with Clutter is right around the corner")
   end
 end
