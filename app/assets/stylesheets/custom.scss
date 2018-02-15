@@ -201,7 +201,7 @@ a.right.carousel-control {
 }
 
 .testimonial .tweet {
-  height: 130px;
+  height: 140px;
   width: 350px;
   border-radius: 10px;
   border: 3px solid #2AA3EF;
@@ -215,19 +215,15 @@ a.right.carousel-control {
 
 @media (min-width: 768px) {
   .testimonial .tweet {
-    height: 148px;
+    height: 160px;
     width: 400px;
-    border-radius: 10px;
-    border: 3px solid #2AA3EF;
   }
 }
 
 @media (min-width: 1280px) {
   .testimonial .tweet {
-    height: 167px;
+    height: 180px;
     width: 450px;
-    border-radius: 10px;
-    border: 3px solid #2AA3EF;
   }
 }
 
