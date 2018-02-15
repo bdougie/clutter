@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   post 'refer_user', to: 'referrals#refer_user'
 
+  resources :charges, only: [:new, :create]
+
   devise_for :users, :controllers => { registrations: 'registrations' }
 
   root 'welcome#index'

@@ -22,6 +22,7 @@ gem 'figaro'
 gem 'faker'
 gem 'animate-rails'
 gem 'activeadmin'
+gem 'stripe'
 
 
 group :development, :test do

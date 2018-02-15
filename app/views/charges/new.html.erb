@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row text-center">
+    <div class="col-md-4 col-md-offset-4"><br>
+      <%= form_tag charges_path do %>
+        <script class='stripe-button' src="https://checkout.stripe.com/checkout.js" 
+                                      data-key="<%= @stripe_btn_data[:key] %>" 
+                                      data-amount="<%= @stripe_btn_data[:amount] %>" 
+                                      data-description="<%= @stripe_btn_data[:description] %>" >
+        </script>
+      <% end %>
+    </div>
+  </div>
+</div>
