@@ -9,10 +9,10 @@ Rails.application.routes.draw do
   get 'services', to: 'services#index'
 
   get 'referrals', to: 'referrals#index'
-
   post 'refer_user', to: 'referrals#refer_user'
 
-  resources :charges, only: [:new, :create]
+  get 'new_charge', to: 'payments#new'
+  post 'charges', to: 'payments#create'
 
   devise_for :users, :controllers => { registrations: 'registrations' }
 

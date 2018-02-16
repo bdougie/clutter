@@ -1,10 +1,11 @@
-class ChargesController < ApplicationController
+class PaymentsController < ApplicationController
+
   def new
-    @stripe_btn_data = {
-      key: "#{ Rails.configuration.stripe[:publishable_key] }",
-      description: "#{current_user.service} Package",
-      amount: amount
-    }
+    # @stripe_btn_data = {
+    #   key: "#{ Rails.configuration.stripe[:publishable_key] }",
+    #   description: "BigMoney Membership - #{current_user.name}",
+    #   amount: amount
+    # }
   end
 
   def create
@@ -16,8 +17,15 @@ class ChargesController < ApplicationController
     charge = Stripe::Charge.create(
       :customer    => customer.id,
       :amount      => amount,
-      :description => "#{current_user.service} Package  - #{current_user.name}",
+      :description => "#{current_user.name} - #{current_user.service} Package",
       :currency    => "usd"
+    )
+
+    Payment.create(
+      :user_id            => current_user.id,
+      :stripe_token       => params[:stripeToken],
+      :stripe_customer_id => charge.customer,
+      :amount             => charge.amount
     )
 
     flash[:notice] = "Your payment of $#{amount / 100} for the Clutter #{current_user.service} Package has been successfully completed. Thank you!"
@@ -28,13 +36,13 @@ class ChargesController < ApplicationController
     redirect_to new_charge_path
   end
 
-  private
+  private 
 
   def amount
     if current_user.service == "Starter"
       return 150_00
     elsif current_user.service == "Standard"
-      return 240_00
+      return 280_00
     elsif current_user.service == "Premium"
       return 390_00
     end

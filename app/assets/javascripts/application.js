@@ -18,6 +18,7 @@
 //= require_tree .
 
 
+// Sign up Modal
 $(window).on('load',function() {
   if (localStorage.getItem('popState') != 'shown') {
     jQuery.noConflict();
@@ -26,6 +27,7 @@ $(window).on('load',function() {
   }
 });
 
+// Animate Methods
 var animateMethods = function() {
   var revealMethod = function() {
     $(this).css({
@@ -37,6 +39,7 @@ var animateMethods = function() {
   $.each($('.method-box'), revealMethod);
 };
 
+// Animate Services
 var animateServices = function() {
   var revealService = function() {
     $(this).css({
@@ -51,8 +54,21 @@ var animateServices = function() {
 
 $(document).on('turbolinks:load', function() {
 
+  // Navbar color change on scroll
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 50) {
+      $('.navbar-default').addClass('scroll');
+      $('a.btn.btn-primary.sign-up').addClass('scroll');
+    } else {
+      $('.navbar-default').removeClass('scroll');
+      $('a.btn.btn-primary.sign-up').removeClass('scroll');
+    }
+  });
+
+
   // Clutter header animation
   $('.header-content-inner h1').addClass('animated pulse');
+
 
   // Typed Animation
   var header = {
@@ -65,16 +81,6 @@ $(document).on('turbolinks:load', function() {
 
   var typed = new Typed(".header-content-inner .typed", header);
 
-  // Navbar color change on scroll
-  $(window).scroll(function() {
-    if ($(document).scrollTop() > 50) {
-      $('.navbar-default').addClass('scroll');
-      $('a.btn.btn-primary.sign-up').addClass('scroll');
-    } else {
-      $('.navbar-default').removeClass('scroll');
-      $('a.btn.btn-primary.sign-up').removeClass('scroll');
-    }
-  });
 
   // Nav link ease scroll to section
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
@@ -90,6 +96,7 @@ $(document).on('turbolinks:load', function() {
     }
   });
 
+
   // Method box ease-in transition on scroll
   var scrollMethod = $('#method').offset().top - $(window).height() + 200;
   $(window).scroll(function(event) {
@@ -97,6 +104,7 @@ $(document).on('turbolinks:load', function() {
       animateMethods();
     }
   });
+
 
   // Service box ease-in transition on scroll
   var scrollDistance = $('#process').offset().top - $(window).height() + 200;
@@ -106,11 +114,12 @@ $(document).on('turbolinks:load', function() {
     }
   });
 
+
   // Testimonials fadeIn on scroll
   var scrollTweet = $('#team p').offset().top - $(window).height() + 500;
   $(window).scroll(function(event) {
     if ($(window).scrollTop() >= scrollTweet) {
-      $('.testimonial .tweet').fadeIn(4000);
+      $('.testimonial .tweet').fadeIn(2000);
     }
   });
 

@@ -223,6 +223,30 @@ a.right.carousel-control {
 
 
 /* -------------------------------- */
+/* FOOTER SECTION                   */
+/* -------------------------------- */
+footer {
+  padding: 30px;
+  display: table;
+}
+
+footer p { 
+  width: 1132px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+p.copyright { 
+  font-size: 18px;
+  text-align: left;
+}
+
+p.social-media {
+  text-align: right;
+}
+
+
+/* -------------------------------- */
 /* APPROACH PAGE                    */
 /* -------------------------------- */
 .approach {
@@ -263,6 +287,7 @@ span.arrows.glyphicon.glyphicon-chevron-right {
   .carousel-inner .img {
     height: 475px;
     width: 525px;
+    border: 7px solid #008080;
   }
   .carousel-inner p {
     font-size: 18px;
@@ -308,30 +333,6 @@ div.thumbnail {
   .packages {
     margin: 0px;
   }
-}
-
-
-/* -------------------------------- */
-/* FOOTER SECTION                   */
-/* -------------------------------- */
-footer {
-  padding: 30px;
-  display: table;
-}
-
-footer p { 
-  width: 1132px;
-  display: table-cell;
-  vertical-align: middle;
-}
-
-p.copyright { 
-  font-size: 18px;
-  text-align: left;
-}
-
-p.social-media {
-  text-align: right;
 }
 
 
