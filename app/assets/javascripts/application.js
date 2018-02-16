@@ -20,6 +20,7 @@
 
 $(window).on('load',function() {
   if (localStorage.getItem('popState') != 'shown') {
+    jQuery.noConflict();
     $('#myModal').modal('show');
     localStorage.setItem('popState','shown')
   }
@@ -89,19 +90,27 @@ $(document).on('turbolinks:load', function() {
     }
   });
 
-  // Method and Service box ease-in transition on scroll
+  // Method box ease-in transition on scroll
   var scrollMethod = $('#method').offset().top - $(window).height() + 200;
-  var scrollDistance = $('#process').offset().top - $(window).height() + 200;
-  
   $(window).scroll(function(event) {
     if ($(window).scrollTop() >= scrollMethod) {
       animateMethods();
     }
   });
-  
+
+  // Service box ease-in transition on scroll
+  var scrollDistance = $('#process').offset().top - $(window).height() + 200;
   $(window).scroll(function(event) {
     if ($(window).scrollTop() >= scrollDistance) {
       animateServices();
+    }
+  });
+
+  // Testimonials fadeIn on scroll
+  var scrollTweet = $('#team p').offset().top - $(window).height() + 500;
+  $(window).scroll(function(event) {
+    if ($(window).scrollTop() >= scrollTweet) {
+      $('.testimonial .tweet').fadeIn(4000);
     }
   });
 
