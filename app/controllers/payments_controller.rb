@@ -22,10 +22,11 @@ class PaymentsController < ApplicationController
     )
 
     Payment.create(
-      :user_id            => current_user.id,
       :stripe_token       => params[:stripeToken],
       :stripe_customer_id => charge.customer,
-      :amount             => charge.amount
+      :user_id            => current_user.id,
+      :amount             => charge.amount / 100,
+      :package            => current_user.service
     )
 
     flash[:notice] = "Your payment of $#{amount / 100} for the Clutter #{current_user.service} Package has been successfully completed. Thank you!"

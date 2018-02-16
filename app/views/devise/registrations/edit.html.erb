@@ -97,7 +97,7 @@
         <script class="stripe-button" src="https://checkout.stripe.com/checkout.js" 
                 data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                 data-description="<%= current_user.service %> Package"
-                data-amount="15000">
+                data-amount="">
         </script>
       <% end %>
     </div>
