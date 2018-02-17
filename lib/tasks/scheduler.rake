@@ -31,11 +31,10 @@ end
 
 desc "Reminder email sent before the third session"
 task :third_session_reminder => :environment do
-  one_time = true
   users = User.all
   users.each do |user| 
     if user.third_appointment
-      if ((Time.zone.now - 8.hours >= user.third_appointment - 2.days) && (Time.zone.now - 8.hours < user.third_appointment)
+      if (Time.zone.now - 8.hours >= user.third_appointment - 2.days) && (Time.zone.now - 8.hours < user.third_appointment)
         UserMailer.third_session_email(user).deliver
       end
     end
